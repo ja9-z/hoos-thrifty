@@ -40,7 +40,7 @@ export default function Welcome(){
                 }
                 }
             >
-                Sell something! </button>
+                sell something💸 </button>
                 <button 
                 onClick={() => nagivate("main")}
                 style = {{
@@ -54,7 +54,7 @@ export default function Welcome(){
                 }
                 }
             > 
-                Get started! </button>
+                get started🩷 </button>
             </div>
         </div>
     )

@@ -9,6 +9,12 @@
 }
 
 
+.subScreen2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:center;
+}
 
 .subScreen{
     display: flex;
@@ -17,4 +23,12 @@
     justify-content: center;
     margin-bottom: 5vh;
     
+}
+
+.buttonStyle{
+    background-color: white;
+    font-size: 40px;
+    border-radius: 0.5vh;
+    margin: auto;
+
 }
