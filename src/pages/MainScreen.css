@@ -3,6 +3,18 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: fit-content;
     background-color: #FFFBF2;
+    
+}
+
+
+
+.subScreen{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5vh;
+    
 }
