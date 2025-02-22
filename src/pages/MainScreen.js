@@ -8,7 +8,9 @@ import {Card} from "../components/Card"
 export default function MainScreen(){
     return(
         <div className = "MainScreen">
-            <Card/>
+            <Card imgSrc = "https://picsum.photos/id/237/200/300" 
+            imgAlt = "Selling" title = "Items for Sale" 
+            description = "beautiful dog looking to be adopted"/>
         </div>
 
     )
