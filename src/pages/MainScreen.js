@@ -1,16 +1,15 @@
-//import Header from "../components/Header"
 
-
+import "./MainScreen.css"
+import {Card} from "../components/Card"
 //let testItem = new itemProfile("doe", "jane", "hello@email", "itemname");
 
 
 
 export default function MainScreen(){
     return(
-        <div>
-            
-            <h2>Begin dating! Meet the bacheloers</h2>
-            
+        <div className = "MainScreen">
+            <Card/>
         </div>
+
     )
 }
