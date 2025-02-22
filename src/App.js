@@ -5,6 +5,7 @@ import Header from "./components/Header"
 import Welcome from "./pages/Welcome"
 import MainScreen from "./pages/MainScreen"
 import NoPage from "./pages/NoPage"
+import SellerScreen from "./pages/SellerScreen"
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
           <Route index element={<Welcome />} />
           <Route path ="/welcome" element = {<Welcome />} />
           <Route path = "/main" element = {<MainScreen />} />
+          <Route path = "/seller" element = {<SellerScreen/>}></Route>
           <Route path = "*" element = {<NoPage />} />
         </Routes>
       </BrowserRouter>
