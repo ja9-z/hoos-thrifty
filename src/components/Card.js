@@ -10,7 +10,7 @@ export const Card = ({
         <div className = "cardContainer">
             <img src ={imgSrc} alt = {imgAlt} className = "cardImg"/>
             
-            <h2 className = "cardTitle">{title}</h2>
+            <h1 className = "cardTitle">{title}</h1>
             <p className = "cardDesc">{description}</p>
             
         </div>

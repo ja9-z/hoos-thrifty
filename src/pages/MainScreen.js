@@ -10,7 +10,7 @@ export default function MainScreen(){
         <div className = "MainScreen">
             <Card imgSrc = "https://picsum.photos/id/237/200/300" 
             imgAlt = "Selling" title = "Items for Sale" 
-            description = "beautiful dog looking to be adopted"/>
+            description = "beautiful dog looking to be adopted. Not much to look for aside from here, brand new, 11 years old."/>
         </div>
 
     )

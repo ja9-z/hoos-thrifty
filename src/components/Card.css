@@ -1,10 +1,10 @@
 .cardContainer{
     width: 64vh;
-    border-radius: 1vh;
+    border-radius: 2vh;
     display:block;
     margin: 5vh 5vh;
     background-color: white;
-    height: 80vh;
+    height: fit-content;
     outline-style: solid;
     outline-width: 1.5px;
     outline-color: #000000
@@ -12,7 +12,9 @@
 
 
 .cardImg{
-    object-fit: contain;
+    width: 64vh;
+    height:64vh;
+    object-fit: cover;
     border-radius: 1vh 1vh 0 0;
 }
 
