@@ -20,38 +20,41 @@ const SellerScreen =() =>{
 
   return (
     <div class = "container">
-      <input type="file" onChange={handleImageChange} accept="image/*" />
-      <div
+    
+        <input type="file" onChange={handleImageChange} accept="image/*" />
+        <div
         style={{
             width: "300px", // Set the box width
             height: "300px", // Set the box height
             border: "2px dashed #ccc", // Add a dashed border to the box
-            display: "block",
+            display: "flex",
+            flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
             backgroundImage: image ? `url(${image})` : "none",
             backgroundSize: "cover",
+            boxShadow: image ? "0 4px 10px rgba(0, 0, 0, 0.1)" : "none",
             backgroundPosition: "center",  
         }}
-      >
+        >
         {!image && <span>Upload an image</span>} {/* Placeholder text */}
-      </div>
+        </div>
         <div class = "main-container">
-            <h1 class = "header">one last step...</h1>
+            <h1 class = "header">One last step...</h1>
         <div class = "form">
-            <h1 class = "formHeader">finish these sentences to find the one 😉</h1>
+            <h1 class = "formHeader">Finish these sentences to find the one 😉</h1>
             <form>
-                <label class = "question1Label"> together we could...</label>
+                <label class = "question1Label">Q1. Together we could...</label>
                 <textarea class = "question1"
                     required
                 >
                 </textarea>
-                <label class = "question2Label"> you could take me home if you...</label>
+                <label class = "question2Label">Q2. You could take me home if you...</label>
                 <textarea class ="question2"
                     required
                 >
                 </textarea>
-                <label class = "question3Label"> some of my imperfections are...</label>
+                <label class = "question3Label">Q3. Some of my imperfections are...</label>
                 <textarea class ="question3"
                     required
                 >
