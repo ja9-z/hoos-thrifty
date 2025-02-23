@@ -6,6 +6,7 @@ import Welcome from "./pages/Welcome"
 import MainScreen from "./pages/MainScreen"
 import NoPage from "./pages/NoPage"
 import SellerScreen from "./pages/SellerScreen"
+import Prompts from "./pages/Prompts"
 
 
 export default function App() {
