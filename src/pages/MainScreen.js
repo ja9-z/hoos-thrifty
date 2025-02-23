@@ -268,7 +268,7 @@ export default function MainScreen(){
                     textAlign: "center",
                     fontSize: 50,
                     fontFamily: "Playfair Display"
-                }}>it's a match...!</h1>
+                }}>✨ it's a match ✨</h1>
             </div>
             <div className = "subScreenAlt">
                 <motion.div>
@@ -300,7 +300,7 @@ export default function MainScreen(){
                             </motion.div>
                         </motion.div>
                 <motion.div>
-                    <button className = "buttonStyle" onClick = {handle_check_click}>
+                    <button className = "buttonStyle checkButton" onClick = {handle_check_click}>
                         <img src={imgSrcCheck} alt="Check" className="Check" />
                     </button>
                 </motion.div>
@@ -311,7 +311,7 @@ export default function MainScreen(){
                     <Question question = "together we could..." answer = "spend an evening painting together <3"/>
                     <Question question = "you should take me home if you..." answer = "also love da vinci"/>
                     <Question question = "an imperfection of mine is..." answer = "I can be pretty unstable under a lot of pressure..."/>
-                    <Question question = "like me? reach out!" answer = {<span>Seller Name: Janine Zheng<br />Email: janinezheng@gmail.com<br />Venmo: @jz12345</span>} />
+                    <Question question = "like me? reach out!" answer = {<span>Seller Name: Janine Zeng<br />Email: janinezeng@gmail.com<br />Venmo: @jz12345</span>} />
                 </motion.div>
                 <motion.div className = "ItemInfo2">
                     <Question question = "together we could..." answer = "make memories that will last forever"/>
