@@ -117,7 +117,7 @@ export default function MainScreen(){
                             textAlign: "center",
                             fontSize: 50,
                             fontFamily: "Playfair Display"
-                        }}>meet your match!💞</h1>
+                        }}>meet your match! 💞</h1>
                     </div>
                     <motion.div className = "subScreenAlt3">
                         <Card imgSrc = {imgSrc_c}

@@ -54,36 +54,50 @@ export default function Welcome() {
                 />
             </div>
 
-            <div className="button-container" style={{ display: "flex" }}>
-                <button
-                    onClick={() => navigate("seller")}
-                    style={{
-                        display: "block",
-                        marginLeft: "auto",
-                        marginRight: "auto",
-                        marginTop: -100,
-                        fontSize: 40,
-                        fontFamily: "Playfair Display",
-                        borderRadius: 35,
-                    }}
-                >
-                    sell something💸
-                </button>
-                <button
-                    onClick={() => navigate("main")}
-                    style={{
-                        display: "block",
-                        marginLeft: "auto",
-                        marginRight: "auto",
-                        marginTop: -100,
-                        fontSize: 40,
-                        fontFamily: "Playfair Display",
-                        borderRadius: 35,
-                    }}
-                >
-                    get started🩷
-                </button>
-            </div>
+<div className="button-container" style={{ display: "flex" }}>
+    <motion.button
+        onClick={() => navigate("seller")}
+        initial={{ opacity: 0 }}
+        whileHover={{ backgroundColor: "rgba(220, 220, 220, 1)" }}
+        whileTap={{ backgroundColor: "rgba(255, 255, 255, 1)" }}
+        whileInView={{ opacity: 1 }}
+        style={{
+            display: "block",
+            marginLeft: "auto",
+            marginRight: "auto",
+            marginTop: -100,
+            fontSize: 40,
+            fontFamily: "Playfair Display",
+            borderRadius: 35,
+            position: "relative", 
+            top: -650,
+            left: 250,
+        }}
+    >
+        sell something 💸
+    </motion.button>
+    <motion.button
+        onClick={() => navigate("main")}
+        initial={{ opacity: 0 }}
+        whileHover={{ backgroundColor: "rgba(220, 220, 220, 1)" }}
+        whileTap={{ backgroundColor: "rgba(255, 255, 255, 1)" }}
+        whileInView={{ opacity: 1 }}
+        style={{
+            display: "block",
+            marginLeft: "auto",
+            marginRight: "auto",
+            marginTop: -100,
+            fontSize: 40,
+            fontFamily: "Playfair Display",
+            borderRadius: 35,
+            position: "relative",
+            top: -650,
+            left: -200, 
+        }}
+    >   
+        get started 🩷 
+    </motion.button>
+</div>
         </div>
     );
 }
