@@ -12,6 +12,7 @@ import imgSrcCamera from '../assets/Camera.png';
 import imgSrcJacket from '../assets/Jacket.png';
 import imgSrcCup from '../assets/Cup.png';
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 import transition from '../components/Transition';
 
@@ -28,6 +29,9 @@ let desc_a = "Lightly used Easel, perfect for painting! It can hold up to 20 lbs
 let desc_b = "NIKON D3100 Camera, comes with a 18-55mm lens. Extremely good quality. Comes with a neck strap and lense cap, does NOT come with a camera bag.";
 let desc_c = "Berksha Woman's leather jacket in size small. Slightly stiff, but will break in with wear. Wash inside out and hang dry.";
 let desc_d = "Heavy duty glass coffee cup. Withstands high temperatures and is dishwasher safe. Pretty thick glass, which also makes it a bit heavy";
+
+
+
 
 const transition1 = {
     duration: 0.6,
@@ -255,6 +259,12 @@ const handle_back_click=()=>{
 
 
 const MainScreen = ()=>{
+    useEffect(() => {
+        console.log("MainScreen Mounted");
+        return () => {
+            console.log("MainScreen Unmounted"); // This should log when you navigate away
+        };
+    }, []);
     const navigate = useNavigate();
     return(
         <div>
