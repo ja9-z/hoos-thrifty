@@ -10,11 +10,12 @@ import Prompts from "./pages/Prompts"
 import { AnimatePresence } from 'framer-motion'
 
 
-export default function App() {
+function App() {
   return (
     <div>
       
       <BrowserRouter>
+        <AnimatePresence mode = "wait">
         <Routes>
           <Route index element={<Welcome />} />
           <Route path ="/welcome" element = {<Welcome />} />
@@ -23,6 +24,7 @@ export default function App() {
           <Route path = "/prompts" element = {<Prompts/>}></Route>
           <Route path = "*" element = {<NoPage />} />
         </Routes>
+        </AnimatePresence>
       </BrowserRouter>
       
     </div>
@@ -30,4 +32,4 @@ export default function App() {
 }
 
 
-//export default App;
+export default App;

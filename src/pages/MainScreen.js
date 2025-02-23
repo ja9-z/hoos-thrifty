@@ -11,9 +11,9 @@ import imgSrcEasel from '../assets/Easel.png';
 import imgSrcCamera from '../assets/Camera.png';
 import imgSrcJacket from '../assets/Jacket.png';
 import imgSrcCup from '../assets/Cup.png';
+import { useNavigate } from "react-router-dom";
 
-
-//let testItem = new itemProfile("doe", "jane", "hello@email", "itemname");
+import transition from '../components/Transition';
 
 let imgSrc_a = imgSrcEasel;
 let imgSrc_b = imgSrcCamera;
@@ -28,7 +28,8 @@ let desc_a = "Lightly used Easel, perfect for painting! It can hold up to 20 lbs
 let desc_b = "NIKON D3100 Camera, comes with a 18-55mm lens. Extremely good quality. Comes with a neck strap and lense cap, does NOT come with a camera bag.";
 let desc_c = "Berksha Woman's leather jacket in size small. Slightly stiff, but will break in with wear. Wash inside out and hang dry.";
 let desc_d = "Heavy duty glass coffee cup. Withstands high temperatures and is dishwasher safe. Pretty thick glass, which also makes it a bit heavy";
-const transition = {
+
+const transition1 = {
     duration: 0.6,
     ease: "easeOut"
     
