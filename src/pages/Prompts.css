@@ -1,0 +1,97 @@
+.main-container{
+    width:1000px;
+    margin: auto;
+    text-align: center;
+}
+
+.header{
+    text-align:center;
+    font-family:Playfair Display;
+    font-size:50px
+}
+
+.form{
+    display:block;
+    height: 675px;
+    width: 550px;
+    margin-top: 50px;
+    margin:auto;
+    background-color: #efeeee;
+    outline-style: solid;
+    outline-width: 5px;
+    outline-color: #000000;
+}
+
+.question1Label{
+    font-family: Playfair Display;
+    font-size: 25px;
+    text-align:center;
+}
+
+.question1{
+    width:95%;
+    padding:10px;
+    margin:10px;
+    border:1px solid black;
+    box-sizing: border-box;
+    display:block;
+}
+
+.question2Label{
+    font-family: Playfair Display;
+    font-size: 25px;
+    width:95%
+}
+
+.question2{
+    width:95%;
+    padding:10px;
+    margin:10px;
+    border:1px solid black;
+    box-sizing: border-box;
+    display:block;
+}
+
+.question3Label{
+    font-family: Playfair Display;
+    font-size: 25px;
+    text-align:center;
+}
+
+.question3{
+    width:95%;
+    padding:10px;
+    margin:10px;
+    border:1px solid black;
+    box-sizing: border-box;
+    display:block;
+}
+
+.question4Label{
+    font-family: Playfair Display;
+    font-size: 25px;
+    width:95%
+}
+
+.question4{
+    width:95%;
+    padding:10px;
+    margin:10px;
+    border:1px solid black;
+    box-sizing: border-box;
+    display:block;
+}
+
+.loveButton{
+    background:#efeeee;
+    font-size:125px;
+    border:0;
+    padding:8px;
+    border-radius:8px;
+    margin-top:auto;
+    line-height:normal;
+    box-sizing:border-box;
+    cursor:pointer;
+}
+
+

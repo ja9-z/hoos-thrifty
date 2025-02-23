@@ -56,7 +56,7 @@ export default function Welcome() {
 
 <div className="button-container" style={{ display: "flex" }}>
     <motion.button
-        onClick={() => navigate("seller")}
+        onClick={() => navigate("/seller")}
         initial={{ opacity: 0 }}
         whileHover={{ backgroundColor: "rgba(220, 220, 220, 1)" }}
         whileTap={{ backgroundColor: "rgba(255, 255, 255, 1)" }}
@@ -77,7 +77,7 @@ export default function Welcome() {
         sell something💸
     </motion.button>
     <motion.button
-        onClick={() => navigate("main")}
+        onClick={() => navigate("/main")}
         initial={{ opacity: 0 }}
         whileHover={{ backgroundColor: "rgba(220, 220, 220, 1)" }}
         whileTap={{ backgroundColor: "rgba(255, 255, 255, 1)" }}
