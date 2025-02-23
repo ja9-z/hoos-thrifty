@@ -10,6 +10,8 @@ import Prompts from "./pages/Prompts"
 import { AnimatePresence } from 'framer-motion'
 import TestBackground from './pages/testBackground'
 
+
+
 function AnimatedRoutes() {
   const location = useLocation();  // ✅ Tracks location changes
 
@@ -31,7 +33,9 @@ function AnimatedRoutes() {
 export default function App() {
   return (
       <Router>
-          <AnimatedRoutes />
+       
+            <AnimatedRoutes />
+    
       </Router>
   );
 }
