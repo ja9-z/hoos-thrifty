@@ -26,10 +26,9 @@
     
 }
 
-.subScreenAlt{
+.subScreenAlt3, .subScreenAlt2, .subScreenAlt{
     opacity: 0;
     position: absolute;
-    transform: translateY(12%);
     display: flex;
     flex-direction: column;
     align-items: center;
