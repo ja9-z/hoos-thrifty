@@ -28,8 +28,10 @@
 .cardTitle{
     margin: 2vh 0vh 2vh 2vh;
     font-family: 'Montserrat';
+    font-size: 24px;
 }
 
 .cardDesc{
     margin: 0vh 2vh 2vh 2vh;
+    font-size: 20px;
 }
