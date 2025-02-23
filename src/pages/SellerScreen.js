@@ -2,8 +2,9 @@ import "./SellerScreen.css"
 import "./Prompts.css"
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import transition from "../components/Transition";
 
-function SellerScreen() {
+const SellerScreen =() =>{
   const [image, setImage] = useState(null); // Store the image URL
   const navigate = useNavigate();
   const handleImageChange = (event) => {
@@ -66,7 +67,7 @@ function SellerScreen() {
 
     //da goods for the prompt
     
-  );
+);
 }
 
-export default SellerScreen
+export default transition(SellerScreen);
