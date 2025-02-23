@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import image1 from "../assets/image.png";
 import { motion, useScroll, useTransform } from 'framer-motion'; // Import Framer Motion
 import './Welcome.css';
-
 import transition from '../components/Transition';
 
 const Welcome =()=> {
@@ -12,6 +11,7 @@ const Welcome =()=> {
     const y = useTransform(scrollYProgress, [0, 1], [0, -2000]); // Adjust translation for scroll
 
     return (
+        
         <div
             className="welcome"
             style={{
@@ -22,7 +22,7 @@ const Welcome =()=> {
                 paddingBottom: "200vh",
             }}
         >   
-            <motion.div whileHover={{ backgroundColor: "rgba(0, 0, 0, 1)" }}>
+            <motion.div >
             <h1
                 style={{
                     textAlign: "center",
