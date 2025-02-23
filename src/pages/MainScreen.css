@@ -9,7 +9,7 @@
 }
 
 
-.subScreen2{
+.subScreenAlt{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -17,7 +17,7 @@
     
 }
 
-.subScreen{
+.subScreen1{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -26,7 +26,7 @@
     
 }
 
-.subScreenAlt3, .subScreenAlt2, .subScreenAlt{
+.subScreen4, .subScreen3, .subScreen2{
     opacity: 0;
     position: absolute;
     display: flex;
@@ -42,7 +42,25 @@
     font-size: 40px;
     border-radius: 8vh;
     padding: 2vh;
-    z-index: 10;
+    margin-left:2vh;
+    margin-right:2vh;
+    z-index: 12;
 
 
+}
+
+.heading{
+    z-index: 2;
+}
+
+.ItemInfo{
+    margin: 4vh 4vh;
+    background-color: antiquewhite;
+
+
+}
+
+.vertical{
+    display: flex;
+    flex-direction: row;
 }
