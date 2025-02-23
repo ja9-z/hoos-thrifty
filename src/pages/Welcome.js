@@ -7,7 +7,6 @@ import explain from "../assets/Explain.png";
 
 import { motion, useScroll, useTransform } from 'framer-motion'; // Import Framer Motion
 import './Welcome.css';
-
 import transition from '../components/Transition';
 
 const Welcome =()=> {
@@ -16,6 +15,7 @@ const Welcome =()=> {
     const y = useTransform(scrollYProgress, [0, 1], [0, -2000]); // Adjust translation for scroll
 
     return (
+        
         <><div
             className="welcome"
             style={{
@@ -24,23 +24,27 @@ const Welcome =()=> {
                 minHeight: "200vh", // Increase height to ensure scrollable space
                 backgroundColor: "#FFFDF7",
                 paddingBottom: "200vh",
-            }}
-        >
-            <motion.div whileHover={{ backgroundColor: "rgba(0, 0, 0, 1)" }}>
-                <h1
-                    style={{
-                        textAlign: "center",
-                        marginTop: 200,
-                        marginBottom: 225,
-                        fontSize: 150,
-                        fontFamily: "Playfair Display",
-                        fontWeight: "normal",
-                        position: "relative",
-                    }}
-                >
-                    HOOS THRIFTY
-                </h1>
-            </motion.div>
+            }}>  
+            <motion.h1
+                style={{
+                    textAlign: "center",
+                    marginTop: 200,
+                    marginBottom: 225,
+                    fontSize: 150,
+                    fontFamily: "Playfair Display",
+                    fontWeight: "normal",
+                    position: "relative",
+                }}
+
+                initial={{backgroundColor:"#FFFDF7" ,color: "#000000"}}
+                animate={{backgroundColor: ["#FFFDF7","#000000"],
+                        color: ["#000000","#FFFFFF"]
+                }}
+                transition = {{delay: 1,duration: 0.3, repeat:1, repeatType: "reverse", repeatDelay: 4}}
+            >
+                HOOS THRIFTY
+            </motion.h1>
+           
 
             {/* Wrap image with Framer Motion's motion.img */}
             <div className="image-container">
@@ -188,7 +192,7 @@ const Welcome =()=> {
                         transform: 'translate(-50%, -50%)',
                         zIndex: 1,
                     }} />
-            </div></>
+    </div></>
         
     );
     

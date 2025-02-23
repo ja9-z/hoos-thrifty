@@ -43,7 +43,7 @@ return (
             >
                 home
             </motion.button>
-        <input type="file" onChange={handleImageChange} accept="image/*" />
+        <div name = "picContainer">
         <div
         style={{
             width: "500px", // Set the box width
@@ -61,7 +61,25 @@ return (
             top: "50px",
         }}
         >
-        {!image && <span>Upload an image</span>} {/* Placeholder text */}
+        {!image && <span
+            style={{
+                fontSize: "24px", // Increase the font size here
+                color: "#888", // You can change the color if needed
+                textAlign: "center", // Ensure the text is centered
+            }}
+        >Upload an image</span>} {/* Placeholder text */}
+        </div>
+        <input type="file" onChange={handleImageChange} accept="image/*" 
+            style = {{
+                marginLeft:175,
+                padding: 10,
+                fontSize: 16,
+                fontFamily: "Playfair Display",
+                cursor: "pointer",
+                border: 1,
+                borderRadius:5,
+                color:"#888",
+            }}/> 
         </div>
         </div>
         <div class = "main-container">
