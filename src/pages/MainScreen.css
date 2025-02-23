@@ -54,6 +54,11 @@
 
 }
 
+.checkButton {
+    position: relative;
+    top: -60px;
+}
+
 .buttonContainer {
     display: flex;
     justify-content: center;
