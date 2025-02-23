@@ -21,7 +21,8 @@ const Welcome =()=> {
                 backgroundColor: "#FFFDF7",
                 paddingBottom: "200vh",
             }}
-        >
+        >   
+            <motion.div whileHover={{ backgroundColor: "rgba(0, 0, 0, 1)" }}>
             <h1
                 style={{
                     textAlign: "center",
@@ -35,6 +36,7 @@ const Welcome =()=> {
             >
                 HOOS THRIFTY
             </h1>
+            </motion.div>
 
             {/* Wrap image with Framer Motion's motion.img */}
             <div className="image-container">
