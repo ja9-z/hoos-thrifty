@@ -41,7 +41,9 @@
 .buttonStyle{
     background-color: white;
     font-size: 40px;
-    border-radius: 0.5vh;
-    margin: auto;
+    border-radius: 8vh;
+    padding: 2vh;
+    z-index: 10;
+
 
 }
