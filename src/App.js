@@ -17,6 +17,7 @@ export default function App() {
           <Route path ="/welcome" element = {<Welcome />} />
           <Route path = "/main" element = {<MainScreen />} />
           <Route path = "/seller" element = {<SellerScreen/>}></Route>
+          <Route path = "/prompts" element = {<Prompts/>}></Route>
           <Route path = "*" element = {<NoPage />} />
         </Routes>
       </BrowserRouter>
