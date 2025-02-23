@@ -9,6 +9,8 @@ import SellerScreen from "./pages/SellerScreen"
 import Prompts from "./pages/Prompts"
 import { AnimatePresence } from 'framer-motion'
 
+
+
 function AnimatedRoutes() {
   const location = useLocation();  // ✅ Tracks location changes
 
@@ -29,7 +31,9 @@ function AnimatedRoutes() {
 export default function App() {
   return (
       <Router>
-          <AnimatedRoutes />
+       
+            <AnimatedRoutes />
+    
       </Router>
   );
 }
