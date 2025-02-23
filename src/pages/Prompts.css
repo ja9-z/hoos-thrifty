@@ -12,16 +12,18 @@
 
 .form{
     display:block;
-    height: 675px;
+    height: 600px;
     width: 550px;
-    margin-top: 50px;
+    margin-top: 100px;
     margin:auto;
     background-color: #efeeee;
     outline-style: solid;
     outline-width: 1.5px;
     border-radius: 2vh;
     outline-color: #000000;
+    padding:2.5vh;
 }
+
 
 .question1Label{
     font-family: Playfair Display;
