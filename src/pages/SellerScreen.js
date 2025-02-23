@@ -26,7 +26,7 @@ const SellerScreen =() =>{
             width: "300px", // Set the box width
             height: "300px", // Set the box height
             border: "2px dashed #ccc", // Add a dashed border to the box
-            display: "flex",
+            display: "block",
             alignItems: "center",
             justifyContent: "center",
             backgroundImage: image ? `url(${image})` : "none",
