@@ -4,7 +4,9 @@ import image1 from "../assets/image.png";
 import { motion, useScroll, useTransform } from 'framer-motion'; // Import Framer Motion
 import './Welcome.css';
 
-export default function Welcome() {
+import transition from '../components/Transition';
+
+const Welcome =()=> {
     const navigate = useNavigate();
     const { scrollYProgress } = useScroll(); // Get scroll progress
     const y = useTransform(scrollYProgress, [0, 1], [0, -2000]); // Adjust translation for scroll
@@ -101,3 +103,5 @@ export default function Welcome() {
         </div>
     );
 }
+
+export default transition(Welcome);

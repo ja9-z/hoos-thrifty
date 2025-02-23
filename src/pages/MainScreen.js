@@ -11,9 +11,10 @@ import imgSrcEasel from '../assets/Easel.png';
 import imgSrcCamera from '../assets/Camera.png';
 import imgSrcJacket from '../assets/Jacket.png';
 import imgSrcCup from '../assets/Cup.png';
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
-
-//let testItem = new itemProfile("doe", "jane", "hello@email", "itemname");
+import transition from '../components/Transition';
 
 let imgSrc_a = imgSrcEasel;
 let imgSrc_b = imgSrcCamera;
@@ -28,7 +29,11 @@ let desc_a = "Lightly used Easel, perfect for painting! It can hold up to 20 lbs
 let desc_b = "NIKON D3100 Camera, comes with a 18-55mm lens. Extremely good quality. Comes with a neck strap and lense cap, does NOT come with a camera bag.";
 let desc_c = "Berksha Woman's leather jacket in size small. Slightly stiff, but will break in with wear. Wash inside out and hang dry.";
 let desc_d = "Heavy duty glass coffee cup. Withstands high temperatures and is dishwasher safe. Pretty thick glass, which also makes it a bit heavy";
-const transition = {
+
+
+
+
+const transition1 = {
     duration: 0.6,
     ease: "easeOut"
     
@@ -51,7 +56,7 @@ const handle_x_click = ()=>{
             x: [0,40],
             y: [0,50],
         
-        }, transition)
+        }, transition1)
 
         animate(".subScreen2",{
             opacity:[0,100],
@@ -70,7 +75,7 @@ const handle_x_click = ()=>{
             x: [0,40],
             y: 0,
         
-        }, transition)
+        }, transition1)
         animate(".subScreen3",{
             opacity:[0,100],
             rotate:[-10,0],
@@ -87,7 +92,7 @@ const handle_x_click = ()=>{
             x: [0,40],
             y: 0,
         
-        }, transition)
+        }, transition1)
         animate(".subScreen4",{
             opacity:[0,100],
             rotate:[-10,0],
@@ -104,7 +109,7 @@ const handle_x_click = ()=>{
             x: [0,40],
             y: 0,
         
-        }, transition)
+        }, transition1)
         animate(".subScreen1",{
             opacity:[0,100],
             rotate:[-10,0],
@@ -253,9 +258,38 @@ const handle_back_click=()=>{
 
 
 
-export default function MainScreen(){
+const MainScreen = ()=>{
+    useEffect(() => {
+        console.log("MainScreen Mounted");
+        return () => {
+            console.log("MainScreen Unmounted"); // This should log when you navigate away
+        };
+    }, []);
+    const navigate = useNavigate();
     return(
+        <div>
+            <motion.button 
+            onClick={() => navigate("/welcome")}
+            style={{
+                position: "sticky",
+                display: "flexbox",
+                alignContent: "end",
+                justifyContent: "flex-end",
+                top: "10px",
+                right: "50px",
+                fontSize: 36,
+                fontFamily: "Playfair Display",
+                border:"none",
+                outline: "none",
+                padding: "10px 0px 0px 30px",
+                backgroundColor:  'rgba(52, 52, 52, 0)',
+                zIndex: 5,
+            }}
+            >
+                home
+            </motion.button>
         <div className = "MainScreen">
+            
             <div className = "heading">
                 <h1 style = {{
                     textAlign: "center",
@@ -337,5 +371,8 @@ export default function MainScreen(){
                     </button>
                 </motion.div>
             </div>
+            </div>
     )
 }
+
+export default transition(MainScreen);
