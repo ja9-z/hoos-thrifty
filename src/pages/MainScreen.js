@@ -7,16 +7,15 @@ import {Question} from "../components/Questions"
 import imgSrcX from '../assets/X.png';
 import imgSrcCheck from '../assets/Check.png';
 import imgSrcback from '../assets/Back.png';
-
-
+import { useNavigate } from "react-router-dom";
 //let testItem = new itemProfile("doe", "jane", "hello@email", "itemname");
-
+import transition from "../components/PageTransition"
 let imgSrc_c = "https://picsum.photos/id/237/200/300";
 let imgAlt_c = "Selling";
 let title_c = "Items for Sale";
 let desc_c = "beautiful dog looking to be adopted. Not much to look for aside from here, brand new, 11 years old.";
 
-const transition = {
+const transition1 = {
     duration: 0.6,
     ease: "easeOut"
     
@@ -31,7 +30,7 @@ const transition2 = {
 let currCard = 1;
 
 const handle_x_click = ()=>{
-    if (currCard == 1){
+    if (currCard === 1){
         currCard++;
         animate(".subScreen1",{
             opacity: 0,
@@ -39,7 +38,7 @@ const handle_x_click = ()=>{
             x: [0,40],
             y: [0,50],
         
-        }, transition)
+        }, transition1)
 
         animate(".subScreen2",{
             opacity:[0,100],
@@ -49,7 +48,7 @@ const handle_x_click = ()=>{
         }, transition2)
     }
 
-    else if(currCard == 2){
+    else if(currCard === 2){
         //console.log("clicked");
         currCard++
         animate(".subScreen2",{
@@ -58,7 +57,7 @@ const handle_x_click = ()=>{
             x: [0,40],
             y: 0,
         
-        }, transition)
+        }, transition1)
         animate(".subScreen3",{
             opacity:[0,100],
             rotate:[-10,0],
@@ -67,7 +66,7 @@ const handle_x_click = ()=>{
         }, transition2)
         
     }
-    else if(currCard == 3){
+    else if(currCard === 3){
         currCard++
         animate(".subScreen3",{
             opacity: 0,
@@ -75,7 +74,7 @@ const handle_x_click = ()=>{
             x: [0,40],
             y: 0,
         
-        }, transition)
+        }, transition1)
         animate(".subScreen4",{
             opacity:[0,100],
             rotate:[-10,0],
@@ -84,7 +83,7 @@ const handle_x_click = ()=>{
         }, transition2)
         
     }
-    else if(currCard == 4){
+    else if(currCard = 4){
         currCard = 1;
         animate(".subScreen4",{
             opacity: 0,
@@ -92,7 +91,7 @@ const handle_x_click = ()=>{
             x: [0,40],
             y: 0,
         
-        }, transition)
+        }, transition1)
         animate(".subScreen1",{
             opacity:[0,100],
             rotate:[-10,0],
@@ -125,7 +124,7 @@ const handle_check_click = ()=>{
         y: [-10, 0],
         opacity: 100,
     },{ delay: 0.2})
-    if(currCard == 1){
+    if(currCard === 1){
         animate(".subScreen1",{
             x: -300,
             y: -10,
@@ -136,7 +135,7 @@ const handle_check_click = ()=>{
         }, checkTransition1)
         
     }
-    else if(currCard == 2){
+    else if(currCard === 2){
         animate(".subScreen2",{
             x: -300,
             y: -10,
@@ -147,7 +146,7 @@ const handle_check_click = ()=>{
         }, checkTransition1)
         
     }
-    else if(currCard == 3){
+    else if(currCard === 3){
         animate(".subScreen3",{
             x: -300,
             y: -10,
@@ -158,7 +157,7 @@ const handle_check_click = ()=>{
         }, checkTransition1)
         
     }
-    else if(currCard == 4){
+    else if(currCard === 4){
         animate(".subScreen4",{
             x: -300,
             y: -10,
@@ -193,7 +192,7 @@ const handle_back_click=()=>{
         y: [0, -10],
         opacity: 0,
     })
-    if(currCard == 1){
+    if(currCard === 1){
         animate(".subScreen1",{
             x: [-300, 0],
             y: [-10, 0],
@@ -204,7 +203,7 @@ const handle_back_click=()=>{
         }, checkTransition2)
         
     }
-    else if(currCard == 2){
+    else if(currCard === 2){
         animate(".subScreen2",{
             x: [-300, 0],
             y: [-10, 0],
@@ -215,7 +214,7 @@ const handle_back_click=()=>{
         }, checkTransition2)
         
     }
-    else if(currCard == 3){
+    else if(currCard === 3){
         animate(".subScreen3",{
             x: [-300, 0],
             y: [-10, 0],
@@ -226,7 +225,7 @@ const handle_back_click=()=>{
         }, checkTransition2)
         
     }
-    else if(currCard == 4){
+    else if(currCard === 4){
         animate(".subScreen4",{
             x: [-300, 0],
             y: [-10, 0],
@@ -241,9 +240,32 @@ const handle_back_click=()=>{
 
 
 
-export default function MainScreen(){
+const MainScreen = ()=>{
+    const navigate = useNavigate();
     return(
+        <div>
+            <motion.button 
+            onClick={() => navigate("/welcome")}
+            style={{
+                position: "sticky",
+                display: "flexbox",
+                alignContent: "end",
+                justifyContent: "flex-end",
+                top: "10px",
+                right: "50px",
+                fontSize: 36,
+                fontFamily: "Playfair Display",
+                border:"none",
+                outline: "none",
+                padding: "10px 0px 0px 30px",
+                backgroundColor:  'rgba(52, 52, 52, 0)',
+                zIndex: 5,
+            }}
+            >
+                home
+            </motion.button>
         <div className = "MainScreen">
+            
             <div className = "heading">
                 <h1 style = {{
                     textAlign: "center",
@@ -325,5 +347,8 @@ export default function MainScreen(){
                     </button>
                 </motion.div>
             </div>
+            </div>
     )
 }
+
+export default transition(MainScreen);

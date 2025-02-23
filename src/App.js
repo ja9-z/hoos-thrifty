@@ -7,11 +7,13 @@ import MainScreen from "./pages/MainScreen"
 import NoPage from "./pages/NoPage"
 import SellerScreen from "./pages/SellerScreen"
 import Prompts from "./pages/Prompts"
+import { AnimatePresence } from 'framer-motion'
 
 
 export default function App() {
   return (
     <div>
+      
       <BrowserRouter>
         <Routes>
           <Route index element={<Welcome />} />
@@ -22,8 +24,10 @@ export default function App() {
           <Route path = "*" element = {<NoPage />} />
         </Routes>
       </BrowserRouter>
+      
     </div>
   )
 }
+
 
 //export default App;
