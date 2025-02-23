@@ -26,6 +26,18 @@
     
 }
 
+.subScreenAlt{
+    opacity: 0;
+    position: absolute;
+    transform: translateY(12%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5vh;
+    
+}
+
 .buttonStyle{
     background-color: white;
     font-size: 40px;

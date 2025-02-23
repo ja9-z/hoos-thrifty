@@ -13,26 +13,56 @@ let title_c = "Items for Sale";
 let desc_c = "beautiful dog looking to be adopted. Not much to look for aside from here, brand new, 11 years old.";
 
 const transition = {
-    duration: 1.0,
-    ease: ["easeOut", "easeIn"]
+    duration: 0.8,
+    ease: "easeOut"
     
 }
 
 const transition2 = {
-    duration:1.5,
+    duration:0.8,
     delay: 1.2,
-    ease: [0, 0.71, 0.8, 1.01],
+    ease: "easeIn",
 }
 
+let trans1 = false;
 
 const handle_click = ()=>{
-    animate(".subScreen",{
-        opacity: [100, 50, 0, 0, 0, 0, 50, 100],
-        rotate: [0, 5, 10, -10, -10, -10, -5, 0],
-        x: [0, 20, 40, -40, -40, -40, -20, 0],
-        y: [0, 20, 40, -40, -40, -40, -20, 0],
+    if(trans1){
+        console.log("clicked");
+        animate(".subScreen",{
+            opacity:[0,100],
+            rotate:[-10,0],
+            x:[-40, 0],
+            y:[-50,0],
+        }, transition2)
         
-    }, transition)
+        animate(".subScreenAlt",{
+            opacity: 0,
+            rotate: 10,
+            x: 40,
+            y: 0,
+        
+        }, transition)
+
+        
+    }
+    else{
+        trans1 = true;
+        animate(".subScreen",{
+            opacity: 0,
+            rotate: 10,
+            x: 40,
+            y: 50,
+        
+        }, transition)
+
+        animate(".subScreenAlt",{
+            opacity:[0,100],
+            rotate:[-10,0],
+            x:[-40, 0],
+            y:[-50,60],
+        }, transition2)
+    }  
 
 }
 
@@ -54,11 +84,17 @@ export default function MainScreen(){
                             fontFamily: "Playfair Display"
                         }}>meet your match!💞</h1>
                     </div>
+                    <motion.div className = "subScreenAlt">
+                        <Card imgSrc = {imgSrc_c}
+                        imgAlt = {imgAlt_c} title = {title_c}
+                        description = "next card"/>
+                    </motion.div>
                     <motion.div className = "subScreen">
                         <Card imgSrc = {imgSrc_c}
                         imgAlt = {imgAlt_c} title = {title_c}
                         description = {desc_c}/>
                     </motion.div>
+                    
                 </div>
                 <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 1.1 }}>
                     <button className = "buttonStyle">✔</button>

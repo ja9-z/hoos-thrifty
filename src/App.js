@@ -7,6 +7,7 @@ import MainScreen from "./pages/MainScreen"
 import NoPage from "./pages/NoPage"
 import SellerScreen from "./pages/SellerScreen"
 
+
 export default function App() {
   return (
     <div>
