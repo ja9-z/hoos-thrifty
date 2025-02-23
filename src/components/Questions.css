@@ -1,0 +1,24 @@
+
+.questionContainer{
+    border-radius: 1vh;
+    background-color: white;
+    height: fit-content;
+    width: 60vh;
+    display: flex;
+    flex-direction: column;
+    outline-style: solid;
+    outline-width: 1.5px;
+    outline-color: #000000;
+    margin: 2vh 2vh;
+    
+
+}
+
+.question{
+    margin: 2vh 2vh 1vh 2vh;
+    font-family: 'Montserrat'; 
+}
+
+.answer{
+    margin: 0vh 2vh 2vh 2vh;
+}

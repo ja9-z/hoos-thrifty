@@ -3,6 +3,7 @@ import "./MainScreen.css"
 import {motion} from "framer-motion"
 import {animate} from "framer-motion"
 import {Card} from "../components/Card"
+import {Question} from "../components/Questions"
 
 
 //let testItem = new itemProfile("doe", "jane", "hello@email", "itemname");
@@ -115,8 +116,13 @@ const handle_check_click = ()=>{
     })
     if(currCard == 1){
         animate(".subScreen1",{
-            x: -400,
+            x: -300,
         },checkTransition1)
+        animate(".ItemInfo1",{
+            x: [500, 250],
+            opacity: 100,
+        }, checkTransition1)
+        
     }
 }
 
@@ -125,20 +131,19 @@ const handle_check_click = ()=>{
 export default function MainScreen(){
     return(
         <div className = "MainScreen">
-            
+            <div className = "heading">
+                <h1 style = {{
+                    textAlign: "center",
+                    fontSize: 50,
+                    fontFamily: "Playfair Display"
+                }}>meet your match!💞</h1>
+            </div>
             <div className = "subScreenAlt">
                 <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 1.1 }}>
                     <button className = "buttonStyle" onClick = {handle_x_click}>❌</button>
                 </motion.div>
                 <div className = "MainScreen">
-                    <div className = "heading">
-                        <h1 style = {{
-                            textAlign: "center",
-                            fontSize: 50,
-                            fontFamily: "Playfair Display"
-                        }}>meet your match!💞</h1>
-                    </div>
-                    <div className = "vertical">
+                    
                         <motion.div whileHover={{y: -5}}>
                             <motion.div className = "subScreen4">
                                 <Card imgSrc = {imgSrc_c}
@@ -161,14 +166,17 @@ export default function MainScreen(){
                                 description = {desc_c}/>
                             </motion.div>
                         </motion.div>
-                        </div>
-                    <motion.div className = "ItemInfo">
-                    test
-                    </motion.div>
-                
+                        
+                    
                 </div>
                 <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 1.1 }}>
                     <button className = "buttonStyle" onClick = {handle_check_click}>✔</button>
+                </motion.div>
+                <motion.div className = "ItemInfo1">
+                    <Question question = "together we could..." answer = "have a fun night together ;)"/>
+                    <Question question = "you should take me home if you..." answer = "ans"/>
+                    <Question question = "an imperfection of mine is..." answer = "asn"/>
+                    <Question question = "like me? reach out!" answer = "ans"/>
                 </motion.div>
             </div>
         </div>
