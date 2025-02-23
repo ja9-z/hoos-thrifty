@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import image1 from "../assets/image.png";
 import image2 from "../assets/image2.png";
-import explain from "../assets/Explain.png";
+import explain from "../assets/Explain1.png";
 
 
 import { motion, useScroll, useTransform } from 'framer-motion'; // Import Framer Motion
@@ -175,14 +175,14 @@ const Welcome =()=> {
                 </h2>
             </motion.div>
         </div>
-        <div className="image-containerExplain">
+        <div className="image-containerExplain1">
                 <motion.img
                     src={explain}
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 2 }}
-                    className="animated-imageExplain"
-                    alt="Explain.png" 
+                    className="animated-imageExplain1"
+                    alt="Explain1.png" 
                     style={{
                         width: '1400px',
                         position: 'relative',
