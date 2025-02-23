@@ -18,7 +18,8 @@
     margin:auto;
     background-color: #efeeee;
     outline-style: solid;
-    outline-width: 5px;
+    outline-width: 1.5px;
+    border-radius: 2vh;
     outline-color: #000000;
 }
 
