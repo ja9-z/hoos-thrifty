@@ -1,20 +1,23 @@
 .cardContainer{
-    width: 64vh;
+    width: 62vh;
     border-radius: 2vh;
-    display:block;
-    margin: 0vh 5vh;
+    display: block;
+    margin: 0vh 2vh;
     background-color: white;
     height: min-content;
     outline-style: solid;
     outline-width: 1.5px;
     outline-color: #000000;
-    box-shadow: 0px 25px 32px #767676;
+    box-shadow: 20px 25px 10px #a8a2a2;
+    padding-bottom: 9vh;
+    top: -15px;
+    position: relative;
 }
 
 
 .cardImg{
-    width: 64vh;
-    height:64vh;
+    width: 62vh;
+    height:58vh;
     outline-style:solid;
     outline-width:1.5px;
     outline-color: #000;

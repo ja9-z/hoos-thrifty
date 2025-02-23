@@ -74,7 +74,7 @@ export default function Welcome() {
             left: 250,
         }}
     >
-        sell something 💸
+        sell something💸
     </motion.button>
     <motion.button
         onClick={() => navigate("main")}
@@ -95,7 +95,7 @@ export default function Welcome() {
             left: -200, 
         }}
     >   
-        get started 🩷 
+        get started🩷 
     </motion.button>
 </div>
         </div>

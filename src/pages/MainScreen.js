@@ -4,6 +4,9 @@ import {motion} from "framer-motion"
 import {animate} from "framer-motion"
 import {Card} from "../components/Card"
 import {Question} from "../components/Questions"
+import imgSrcX from '../assets/X.png';
+import imgSrcCheck from '../assets/Check.png';
+import imgSrcback from '../assets/Back.png';
 
 
 //let testItem = new itemProfile("doe", "jane", "hello@email", "itemname");
@@ -174,9 +177,10 @@ export default function MainScreen(){
             </div>
             <div className = "subScreenAlt">
                 <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 1.1 }}>
-                    <button className = "buttonStyle" onClick = {handle_x_click}>❌</button>
+                    <button className = "buttonStyle" onClick = {handle_x_click}>
+                        <img src={imgSrcX} alt="X" className="X" />
+                    </button>
                 </motion.div>
-                <div className = "MainScreen">
                     
                         <motion.div whileHover={{y: -5}}>
                             <motion.div className = "subScreen4">
@@ -200,12 +204,16 @@ export default function MainScreen(){
                                 description = {desc_c}/>
                             </motion.div>
                         </motion.div>
-                        
+                        <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 1.1 }}>
+                    <button className = "buttonStyle" onClick = {handle_check_click}>
+                        <img src={imgSrcCheck} alt="Check" className="Check" />
+                    </button>
+                </motion.div>
                     
                 </div>
-                <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 1.1 }}>
-                    <button className = "buttonStyle" onClick = {handle_check_click}>✔</button>
-                </motion.div>
+               
+
+
                 <motion.div className = "ItemInfo1">
                     <Question question = "together we could..." answer = "have a fun night together ;)"/>
                     <Question question = "you should take me home if you..." answer = "ans"/>
@@ -213,9 +221,10 @@ export default function MainScreen(){
                     <Question question = "like me? reach out!" answer = "ans"/>
                 </motion.div>
                 <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 1.1 }}>
-                    <button className = "buttonStyleAlt" onClick = {handle_back_click}>➡</button>
+                    <button className = "buttonStyleAlt" onClick = {handle_back_click}>
+                        <img src={imgSrcback} alt="Back" className="Back" />
+                    </button>
                 </motion.div>
             </div>
-        </div>
     )
 }
