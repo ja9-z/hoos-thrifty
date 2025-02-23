@@ -43,7 +43,6 @@ return (
             >
                 home
             </motion.button>
-        <input type="file" onChange={handleImageChange} accept="image/*" />
         <div
         style={{
             width: "500px", // Set the box width
@@ -63,6 +62,7 @@ return (
         >
         {!image && <span>Upload an image</span>} {/* Placeholder text */}
         </div>
+        <input name = "fileButton" type="file" onChange={handleImageChange} accept="image/*" />
         </div>
         <div class = "main-container">
             <h1 class = "header">one last step...</h1>
