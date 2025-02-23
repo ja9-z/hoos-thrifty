@@ -121,12 +121,49 @@ const handle_check_click = ()=>{
         opacity: 100,
         x: 200,
     })
+    animate(".headingAlt",{
+        y: [-10, 0],
+        opacity: 100,
+    },{ delay: 0.2})
     if(currCard == 1){
         animate(".subScreen1",{
             x: -300,
             y: -10,
         },checkTransition1)
         animate(".ItemInfo1",{
+            x: [500, 250],
+            opacity: 100,
+        }, checkTransition1)
+        
+    }
+    else if(currCard == 2){
+        animate(".subScreen2",{
+            x: -300,
+            y: -10,
+        },checkTransition1)
+        animate(".ItemInfo2",{
+            x: [500, 250],
+            opacity: 100,
+        }, checkTransition1)
+        
+    }
+    else if(currCard == 3){
+        animate(".subScreen3",{
+            x: -300,
+            y: -10,
+        },checkTransition1)
+        animate(".ItemInfo3",{
+            x: [500, 250],
+            opacity: 100,
+        }, checkTransition1)
+        
+    }
+    else if(currCard == 4){
+        animate(".subScreen4",{
+            x: -300,
+            y: -10,
+        },checkTransition1)
+        animate(".ItemInfo4",{
             x: [500, 250],
             opacity: 100,
         }, checkTransition1)
@@ -142,13 +179,19 @@ const checkTransition2 = {
 const handle_back_click=()=>{
     animate(".buttonStyle",{
         opacity: 100
+    },{
+        delay: 0.3,
     })
     animate(".heading",{
         opacity: 100
-    })
+    },{ delay: 0.2})
     animate(".buttonStyleAlt",{
         opacity: 0,
         x: [200,150],
+    })
+    animate(".headingAlt",{
+        y: [0, -10],
+        opacity: 0,
     })
     if(currCard == 1){
         animate(".subScreen1",{
@@ -156,6 +199,39 @@ const handle_back_click=()=>{
             y: [-10, 0],
         },checkTransition2)
         animate(".ItemInfo1",{
+            x: [250, 500],
+            opacity: 0,
+        }, checkTransition2)
+        
+    }
+    else if(currCard == 2){
+        animate(".subScreen2",{
+            x: [-300, 0],
+            y: [-10, 0],
+        },checkTransition2)
+        animate(".ItemInfo2",{
+            x: [250, 500],
+            opacity: 0,
+        }, checkTransition2)
+        
+    }
+    else if(currCard == 3){
+        animate(".subScreen3",{
+            x: [-300, 0],
+            y: [-10, 0],
+        },checkTransition2)
+        animate(".ItemInfo3",{
+            x: [250, 500],
+            opacity: 0,
+        }, checkTransition2)
+        
+    }
+    else if(currCard == 4){
+        animate(".subScreen4",{
+            x: [-300, 0],
+            y: [-10, 0],
+        },checkTransition2)
+        animate(".ItemInfo4",{
             x: [250, 500],
             opacity: 0,
         }, checkTransition2)
@@ -174,6 +250,13 @@ export default function MainScreen(){
                     fontSize: 50,
                     fontFamily: "Playfair Display"
                 }}>meet your match!💞</h1>
+            </div>
+            <div className = "headingAlt">
+                <h1 style = {{
+                    textAlign: "center",
+                    fontSize: 50,
+                    fontFamily: "Playfair Display"
+                }}>it's a match...!</h1>
             </div>
             <div className = "subScreenAlt">
                 <motion.div>
@@ -204,7 +287,7 @@ export default function MainScreen(){
                                 description = {desc_c}/>
                             </motion.div>
                         </motion.div>
-                        <motion.div>
+                <motion.div>
                     <button className = "buttonStyle" onClick = {handle_check_click}>
                         <img src={imgSrcCheck} alt="Check" className="Check" />
                     </button>
@@ -212,8 +295,25 @@ export default function MainScreen(){
                     
                 </div>
 
-
                 <motion.div className = "ItemInfo1">
+                    <Question question = "together we could..." answer = "have a fun night together ;)"/>
+                    <Question question = "you should take me home if you..." answer = "ans"/>
+                    <Question question = "an imperfection of mine is..." answer = "asn"/>
+                    <Question question = "like me? reach out!" answer = "ans"/>
+                </motion.div>
+                <motion.div className = "ItemInfo2">
+                    <Question question = "together we could..." answer = "have a fun night together ;)"/>
+                    <Question question = "you should take me home if you..." answer = "ans"/>
+                    <Question question = "an imperfection of mine is..." answer = "asn"/>
+                    <Question question = "like me? reach out!" answer = "ans"/>
+                </motion.div>
+                <motion.div className = "ItemInfo3">
+                    <Question question = "together we could..." answer = "have a fun night together ;)"/>
+                    <Question question = "you should take me home if you..." answer = "ans"/>
+                    <Question question = "an imperfection of mine is..." answer = "asn"/>
+                    <Question question = "like me? reach out!" answer = "ans"/>
+                </motion.div>
+                <motion.div className = "ItemInfo4">
                     <Question question = "together we could..." answer = "have a fun night together ;)"/>
                     <Question question = "you should take me home if you..." answer = "ans"/>
                     <Question question = "an imperfection of mine is..." answer = "asn"/>
