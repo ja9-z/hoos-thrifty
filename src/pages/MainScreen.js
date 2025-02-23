@@ -114,14 +114,48 @@ const handle_check_click = ()=>{
     animate(".heading",{
         opacity: 0
     })
+    animate(".buttonStyleAlt",{
+        opacity: 100,
+        x: 200,
+    })
     if(currCard == 1){
         animate(".subScreen1",{
             x: -300,
+            y: -10,
         },checkTransition1)
         animate(".ItemInfo1",{
             x: [500, 250],
             opacity: 100,
         }, checkTransition1)
+        
+    }
+}
+
+const checkTransition2 = {
+    duration:0.4,
+    ease: "easeIn",
+}
+
+const handle_back_click=()=>{
+    animate(".buttonStyle",{
+        opacity: 100
+    })
+    animate(".heading",{
+        opacity: 100
+    })
+    animate(".buttonStyleAlt",{
+        opacity: 0,
+        x: [200,150],
+    })
+    if(currCard == 1){
+        animate(".subScreen1",{
+            x: [-300, 0],
+            y: [-10, 0],
+        },checkTransition2)
+        animate(".ItemInfo1",{
+            x: [250, 500],
+            opacity: 0,
+        }, checkTransition2)
         
     }
 }
@@ -177,6 +211,9 @@ export default function MainScreen(){
                     <Question question = "you should take me home if you..." answer = "ans"/>
                     <Question question = "an imperfection of mine is..." answer = "asn"/>
                     <Question question = "like me? reach out!" answer = "ans"/>
+                </motion.div>
+                <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 1.1 }}>
+                    <button className = "buttonStyleAlt" onClick = {handle_back_click}>➡</button>
                 </motion.div>
             </div>
         </div>

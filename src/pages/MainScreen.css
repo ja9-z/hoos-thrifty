@@ -49,6 +49,17 @@
 
 }
 
+.buttonStyleAlt{
+    background-color: white;
+    font-size: 40px;
+    border-radius: 8vh;
+    padding: 2vh;
+    margin-left:2vh;
+    margin-right:2vh;
+    opacity:0;
+    
+}
+
 .heading{
     z-index: 2;
 }
