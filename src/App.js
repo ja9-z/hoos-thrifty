@@ -8,6 +8,7 @@ import NoPage from "./pages/NoPage"
 import SellerScreen from "./pages/SellerScreen"
 import Prompts from "./pages/Prompts"
 import { AnimatePresence } from 'framer-motion'
+import TestBackground from './pages/testBackground'
 
 function AnimatedRoutes() {
   const location = useLocation();  // ✅ Tracks location changes
@@ -20,6 +21,7 @@ function AnimatedRoutes() {
               <Route path="/main" element={<MainScreen />} />
               <Route path="/seller" element={<SellerScreen />} />
               <Route path="/prompts" element={<Prompts />} />
+              <Route path="/tests" element={<TestBackground />} />
               <Route path="*" element={<NoPage />} />
           </Routes>
       </AnimatePresence>

@@ -262,7 +262,11 @@ const MainScreen = ()=>{
 
     const navigate = useNavigate();
     return(
-        <div>
+        <motion.div
+        initial ={{ backgroundColor: "#FFFDF7"}}
+            animate={{backgroundColor: ["#FFFDF7","#FFEDE3","#EECECE"]}}
+            transition = {{duration: 10, repeat: Infinity, repeatType: "reverse"}}
+        >
             <motion.button 
             onClick={() => navigate("/welcome")}
             style={{
@@ -283,7 +287,11 @@ const MainScreen = ()=>{
             >
                 home
             </motion.button>
-        <div className = "MainScreen">
+        <motion.div className = "MainScreen"
+            initial ={{ backgroundColor: "#FFFDF7"}}
+            animate={{backgroundColor: ["#FFFDF7","#FFEDE3","#EECECE"]}}
+            transition = {{duration: 10, repeat: Infinity, repeatType: "reverse"}}
+        >
             
             <div className = "heading">
                 <h1 style = {{
@@ -365,8 +373,8 @@ const MainScreen = ()=>{
                         <img src={imgSrcback} alt="Back" className="Back" />
                     </button>
                 </motion.div>
-            </div>
-            </div>
+            </motion.div>
+            </motion.div>
     )
 }
 

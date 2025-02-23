@@ -12,7 +12,7 @@ const Welcome =()=> {
 
     return (
         
-        <div
+        <motion.div
             className="welcome"
             style={{
                 margin: "auto",
@@ -20,10 +20,9 @@ const Welcome =()=> {
                 minHeight: "200vh", // Increase height to ensure scrollable space
                 backgroundColor: "#FFFDF7",
                 paddingBottom: "200vh",
-            }}
-        >   
+            }}>  
             <motion.div >
-            <h1
+            <motion.h1
                 style={{
                     textAlign: "center",
                     marginTop: 200,
@@ -33,9 +32,15 @@ const Welcome =()=> {
                     fontWeight: "normal",
                     position: "relative",
                 }}
+
+                initial={{backgroundColor:"#FFFDF7" ,color: "#000000"}}
+                animate={{backgroundColor: ["#FFFDF7","#000000"],
+                        color: ["#000000","#FFFFFF"]
+                }}
+                transition = {{delay: 1,duration: 0.3, repeat:1, repeatType: "reverse", repeatDelay: 4}}
             >
                 HOOS THRIFTY
-            </h1>
+            </motion.h1>
             </motion.div>
 
             {/* Wrap image with Framer Motion's motion.img */}
@@ -102,7 +107,7 @@ const Welcome =()=> {
         get started🩷 
     </motion.button>
 </div>
-        </div>
+        </motion.div>
     );
 }
 
