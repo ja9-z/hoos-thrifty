@@ -176,7 +176,7 @@ export default function MainScreen(){
                 }}>meet your match!💞</h1>
             </div>
             <div className = "subScreenAlt">
-                <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 1.1 }}>
+                <motion.div>
                     <button className = "buttonStyle" onClick = {handle_x_click}>
                         <img src={imgSrcX} alt="X" className="X" />
                     </button>
@@ -204,14 +204,13 @@ export default function MainScreen(){
                                 description = {desc_c}/>
                             </motion.div>
                         </motion.div>
-                        <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 1.1 }}>
+                        <motion.div>
                     <button className = "buttonStyle" onClick = {handle_check_click}>
                         <img src={imgSrcCheck} alt="Check" className="Check" />
                     </button>
                 </motion.div>
                     
                 </div>
-               
 
 
                 <motion.div className = "ItemInfo1">
@@ -220,7 +219,7 @@ export default function MainScreen(){
                     <Question question = "an imperfection of mine is..." answer = "asn"/>
                     <Question question = "like me? reach out!" answer = "ans"/>
                 </motion.div>
-                <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 1.1 }}>
+                <motion.div>
                     <button className = "buttonStyleAlt" onClick = {handle_back_click}>
                         <img src={imgSrcback} alt="Back" className="Back" />
                     </button>
