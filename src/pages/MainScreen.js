@@ -259,12 +259,7 @@ const handle_back_click=()=>{
 
 
 const MainScreen = ()=>{
-    useEffect(() => {
-        console.log("MainScreen Mounted");
-        return () => {
-            console.log("MainScreen Unmounted"); // This should log when you navigate away
-        };
-    }, []);
+
     const navigate = useNavigate();
     return(
         <div>

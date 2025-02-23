@@ -3,29 +3,51 @@ import "./Prompts.css"
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import transition from "../components/Transition";
+import {motion} from "framer-motion"
 
 const SellerScreen =() =>{
   const [image, setImage] = useState(null); // Store the image URL
-  const navigate = useNavigate();
-  const handleImageChange = (event) => {
+const navigate = useNavigate();
+const handleImageChange = (event) => {
     const file = event.target.files[0]; // Get the selected file
     if (file) {
-      const reader = new FileReader();
-      reader.onloadend = () => {
+    const reader = new FileReader();
+    reader.onloadend = () => {
         setImage(reader.result); // Set the image URL in the state
-      };
+    };
       reader.readAsDataURL(file); // Convert image to base64 URL
     }
-  };
+};
 
-  return (
+return (
     <div class = "container">
-    
+        <div className = " imageContainer">
+        <motion.button 
+            onClick={() => navigate("/welcome")}
+            style={{
+                position: "sticky",
+                display: "flexbox",
+                alignContent: "end",
+                justifyContent: "flex-end",
+                top: "10px",
+                right: "50px",
+                margin: "0px 50px 20px 0px",
+                fontSize: 36,
+                fontFamily: "Playfair Display",
+                border:"none",
+                outline: "none",
+                padding: "10px 0px 0px 30px",
+                backgroundColor:  'rgba(52, 52, 52, 0)',
+                zIndex: 5,
+            }}
+            >
+                home
+            </motion.button>
         <input type="file" onChange={handleImageChange} accept="image/*" />
         <div
         style={{
-            width: "300px", // Set the box width
-            height: "300px", // Set the box height
+            width: "500px", // Set the box width
+            height: "500px", // Set the box height
             border: "2px dashed #ccc", // Add a dashed border to the box
             display: "flex",
             flexDirection: "column",
@@ -34,10 +56,13 @@ const SellerScreen =() =>{
             backgroundImage: image ? `url(${image})` : "none",
             backgroundSize: "cover",
             boxShadow: image ? "0 4px 10px rgba(0, 0, 0, 0.1)" : "none",
-            backgroundPosition: "center",  
+            backgroundPosition: "center", 
+            margin: "50px 50px",
+            top: "50px",
         }}
         >
         {!image && <span>Upload an image</span>} {/* Placeholder text */}
+        </div>
         </div>
         <div class = "main-container">
             <h1 class = "header">One last step...</h1>
